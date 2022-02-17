@@ -1,0 +1,95 @@
+// VARIABLES
+
+$bg-color: #fff;
+$text-color: #000;
+$primary-color: #c7c71e;
+
+// GLOBAL CSS
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $bg-color;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.site-header{
+  padding: 20px 0;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-box{
+  margin-right: 25px;
+}
+
+.header__logo-img{
+  width: 60px;
+  height: 60px;
+}
+
+.nav{
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav__list{
+  display: flex;
+  list-style: none;
+}
+
+.nav__item{
+  &:not(:last-child){
+    margin-right: 20px;
+  }
+}
+
+.nav__link{
+  text-decoration: none;
+  color: $text-color;
+  font-size: 18px;
+  text-transform: capitalize;
+  transition: all 0.4s ease;
+
+  &:hover{
+    color: $primary-color;
+  }
+}
+
+.header__btn-box{
+  .btn{
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: $text-color;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+
+    &:hover{
+      color: $primary-color;
+      background-color: transparent;
+      outline: 1px solid $primary-color;
+    }
+  }
+}
